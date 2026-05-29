@@ -191,7 +191,7 @@ function loadMsalScript() {
   return new Promise(function(resolve, reject) {
     if (typeof msal !== 'undefined') { resolve(); return; }
     var script = document.createElement('script');
-    script.src = 'https://alcdn.msauth.net/browser/2.38.3/js/msal-browser.min.js';
+    script.src = 'https://cdn.jsdelivr.net/npm/@azure/msal-browser@2.38.3/lib/msal-browser.min.js';
     script.onload = function() {
       var check = setInterval(function() {
         if (typeof msal !== 'undefined' && msal.PublicClientApplication) {
